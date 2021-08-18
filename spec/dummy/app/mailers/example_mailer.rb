@@ -7,4 +7,13 @@ class ExampleMailer < ActionMailer::Base
       body: 'hello'
     )
   end
+
+  def ticket_mail
+    mail(
+      to: 'someone@somewhere.com',
+      from: 'someoneelse@somewhere.com',
+      subject: 'Fwd: Here is the Subject',
+      body: 'hello'
+    )
+  end
 end
