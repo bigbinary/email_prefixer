@@ -1,9 +1,9 @@
-module EmailPrefixer
+module NeetoEmailPrefixer
   class Configuration
     DEFAULT_BUILDER = lambda do
-      stage_name = EmailPrefixer.configuration.stage_name
+      stage_name = NeetoEmailPrefixer.configuration.stage_name
       prefixes = []
-      prefixes << EmailPrefixer.configuration.application_name
+      prefixes << NeetoEmailPrefixer.configuration.application_name
       prefixes << stage_name.upcase unless stage_name == 'production'
       "[#{prefixes.join(' ')}] "
     end

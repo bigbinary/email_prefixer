@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module EmailPrefixer
+module NeetoEmailPrefixer
   class Interceptor
     SKIP_SUBJECTS = ["Re:", "Fwd:"].freeze
 
@@ -24,7 +24,7 @@ module EmailPrefixer
     private
 
       def custom_prefix_builder(custom_prefix)
-        stage_name = EmailPrefixer.configuration.stage_name
+        stage_name = NeetoEmailPrefixer.configuration.stage_name
         prefixes = []
         prefixes << custom_prefix
         prefixes << stage_name.upcase unless stage_name == 'production'
