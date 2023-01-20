@@ -41,7 +41,7 @@ and can be overridden via the `application_name` setting.
 
 Example:
 ```ruby
-# config/initializers/neeto-email-prefixer.rb
+# config/initializers/neeto_email_prefixer.rb
 NeetoEmailPrefixer.configure do |config|
   config.application_name = 'MyApp'
 end
@@ -54,7 +54,7 @@ via the `stage_name` setting.
 
 Example:
 ```ruby
-# config/initializers/neeto-email-prefixer.rb
+# config/initializers/neeto_email_prefixer.rb
 NeetoEmailPrefixer.configure do |config|
   config.stage_name = 'demo'
 end
@@ -66,7 +66,7 @@ Want to override the default format for the email prefix? Assign a custom
 
 Example:
 ```ruby
-# config/initializers/neeto-email-prefixer.rb
+# config/initializers/neeto_email_prefixer.rb
 NeetoEmailPrefixer.configure do |config|
   config.builder = lambda do
     '**MyEmailPrefix** '
