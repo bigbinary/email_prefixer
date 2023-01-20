@@ -8,7 +8,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "email_prefixer"
+require "neeto-email-prefixer"
 
 module Dummy
   class Application < Rails::Application

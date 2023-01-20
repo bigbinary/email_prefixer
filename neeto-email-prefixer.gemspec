@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'email_prefixer/version'
+require 'neeto_email_prefixer/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'email_prefixer'
-  spec.version       = EmailPrefixer::VERSION
+  spec.name          = 'neeto-email-prefixer'
+  spec.version       = NeetoEmailPrefixer::VERSION
   spec.authors       = ['Ryan Sonnek']
   spec.email         = ['ryan@codecrate.com']
   spec.summary       = 'Automatically add email prefix to outgoing emails'

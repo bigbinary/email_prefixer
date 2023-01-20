@@ -1,8 +1,5 @@
-[![Build Status](https://travis-ci.org/wireframe/email_prefixer.svg?branch=master)](https://travis-ci.org/wireframe/email_prefixer)
-[![Coverage Status](https://coveralls.io/repos/wireframe/email_prefixer/badge.png?branch=master)](https://coveralls.io/r/wireframe/email_prefixer?branch=master)
-[![Code Climate](https://codeclimate.com/github/wireframe/email_prefixer/badges/gpa.svg)](https://codeclimate.com/github/wireframe/email_prefixer)
+# NeetoEmailPrefixer
 
-# EmailPrefixer
 Automatically prefix all delivered emails with the application name
 and Rails environment.  A helpful configuration for setting up email
 filters for non-production emails and ensuring consistency across
@@ -21,16 +18,16 @@ Examples:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'email_prefixer'
+gem "neeto-email-prefixer", github: "bigbinary/neeto-email-prefixer", branch: "stable"
 ```
 
 ## Configuration
-All EmailPrefixer configuration can be customized using
+All NeetoEmailPrefixer configuration can be customized using
 a standard Rails config initializer.
 
 ```ruby
-# config/initializers/email_prefixer.rb
-EmailPrefixer.configure do |config|
+# config/initializers/neeto-email-prefixer.rb
+NeetoEmailPrefixer.configure do |config|
   # custom configuration goes here
 end
 ```
@@ -44,8 +41,8 @@ and can be overridden via the `application_name` setting.
 
 Example:
 ```ruby
-# config/initializers/email_prefixer.rb
-EmailPrefixer.configure do |config|
+# config/initializers/neeto-email-prefixer.rb
+NeetoEmailPrefixer.configure do |config|
   config.application_name = 'MyApp'
 end
 ```
@@ -57,8 +54,8 @@ via the `stage_name` setting.
 
 Example:
 ```ruby
-# config/initializers/email_prefixer.rb
-EmailPrefixer.configure do |config|
+# config/initializers/neeto-email-prefixer.rb
+NeetoEmailPrefixer.configure do |config|
   config.stage_name = 'demo'
 end
 ```
@@ -69,18 +66,10 @@ Want to override the default format for the email prefix? Assign a custom
 
 Example:
 ```ruby
-# config/initializers/email_prefixer.rb
-EmailPrefixer.configure do |config|
+# config/initializers/neeto-email-prefixer.rb
+NeetoEmailPrefixer.configure do |config|
   config.builder = lambda do
     '**MyEmailPrefix** '
   end
 end
 ```
-
-## Contributing
-
-1. Fork it ( https://github.com/wireframe/email_prefixer/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request

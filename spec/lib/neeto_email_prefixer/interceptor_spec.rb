@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe EmailPrefixer::Interceptor do
+RSpec.describe NeetoEmailPrefixer::Interceptor do
   describe '#delivering_email' do
     let(:email) { ExampleMailer.simple_mail }
     let(:ticket_email) { ExampleMailer.ticket_mail }
 
     context 'when application_name and stage_name is configured' do
       before do
-        EmailPrefixer.configuration.application_name = 'CustomApp'
-        EmailPrefixer.configuration.stage_name = 'staging'
+        NeetoEmailPrefixer.configuration.application_name = 'CustomApp'
+        NeetoEmailPrefixer.configuration.stage_name = 'staging'
         email.deliver_now
       end
 
