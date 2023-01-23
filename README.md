@@ -73,3 +73,10 @@ NeetoEmailPrefixer.configure do |config|
   end
 end
 ```
+
+## Why we forked this repo
+
+The following two requirements are added as part of the fork:
+
+1. The prefixer is disabled when the email is prefixed with `Re:` or `Fwd:`.
+2. Added a `custom-prefix-override` option to provide a custom prefix instead of `[application_name stage_name.upcase]`.
