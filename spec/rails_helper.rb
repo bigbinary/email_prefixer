@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV['RAILS_ENV'] ||= 'test'
-require 'spec_helper'
+ENV["RAILS_ENV"] ||= "test"
+require "spec_helper"
 require File.expand_path("../dummy/config/environment", __FILE__)
-require 'rspec/rails'
-require 'pry'
+require "rspec/rails"
+require "pry"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 

@@ -1,24 +1,26 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe NeetoEmailPrefixer::Configuration do
   before do
-    NeetoEmailPrefixer.configuration.application_name = 'MyApp'
+    NeetoEmailPrefixer.configuration.application_name = "MyApp"
   end
 
   describe NeetoEmailPrefixer::Configuration::DEFAULT_BUILDER do
-    describe '#call' do
+    describe "#call" do
       subject { NeetoEmailPrefixer::Configuration::DEFAULT_BUILDER.call }
-      context 'when stage_name == production' do
+      context "when stage_name == production" do
         before do
-          NeetoEmailPrefixer.configuration.stage_name = 'production'
+          NeetoEmailPrefixer.configuration.stage_name = "production"
         end
-        it { is_expected.to eq '[MyApp] ' }
+        it { is_expected.to eq "[MyApp] " }
       end
-      context 'when stage_name != production' do
+      context "when stage_name != production" do
         before do
-          NeetoEmailPrefixer.configuration.stage_name = 'staging'
+          NeetoEmailPrefixer.configuration.stage_name = "staging"
         end
-        it { is_expected.to eq '[MyApp STAGING] ' }
+        it { is_expected.to eq "[MyApp STAGING] " }
       end
     end
   end
