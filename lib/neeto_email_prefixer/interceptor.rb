@@ -11,8 +11,8 @@ module NeetoEmailPrefixer
     end
 
     def delivering_email(mail)
-      if mail['custom-prefix-override'] && mail['custom-prefix-override'].value != ""
-        prefix = custom_prefix_builder(mail['custom-prefix-override'].value)
+      if mail["custom-prefix-override"] && mail["custom-prefix-override"].value != ""
+        prefix = custom_prefix_builder(mail["custom-prefix-override"].value)
       else
         prefix = configuration.builder.call
       end
@@ -27,7 +27,7 @@ module NeetoEmailPrefixer
         stage_name = NeetoEmailPrefixer.configuration.stage_name
         prefixes = []
         prefixes << custom_prefix
-        prefixes << stage_name.upcase unless stage_name == 'production'
+        prefixes << stage_name.upcase unless stage_name == "production"
         "[#{prefixes.join(' ')}] "
       end
 
