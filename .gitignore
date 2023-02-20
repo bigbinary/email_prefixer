@@ -17,3 +17,6 @@ mkmf.log
 *.log
 spec/dummy/tmp
 
+# Igonore built gem file
+*.gem
+
