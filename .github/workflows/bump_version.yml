@@ -1,0 +1,33 @@
+name: Bump version
+on:
+  pull_request:
+    branches:
+    - main
+    types:
+    - closed
+jobs:
+  release:
+    name: Bump version
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ github.event.pull_request.merged == true && (
+      contains(github.event.pull_request.labels.*.name, 'patch') ||
+      contains(github.event.pull_request.labels.*.name, 'minor') ||
+      contains(github.event.pull_request.labels.*.name, 'major') ) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup ruby
+        uses: ruby/setup-ruby@d3c9825d67b0d8720afdfdde5af56c79fdb38d16 # v1.138.0
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Bump version and create PR
+        uses: bigbinary/bump-product-version@v1.1.2
+        with:
+          labels: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+          token: ${{ secrets.GITHUB_TOKEN }}
