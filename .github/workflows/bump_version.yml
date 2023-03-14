@@ -10,10 +10,7 @@ jobs:
     name: Bump version
     runs-on: ubuntu-latest
     if: >-
-      ${{ github.event.pull_request.merged == true && (
-      contains(github.event.pull_request.labels.*.name, 'patch') ||
-      contains(github.event.pull_request.labels.*.name, 'minor') ||
-      contains(github.event.pull_request.labels.*.name, 'major') ) }}
+      ${{ github.event.pull_request.merged == true && !contains(github.event.pull_request.labels.*.name, 'skip-version-bump') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
@@ -27,7 +24,9 @@ jobs:
           bundler-cache: true
 
       - name: Bump version and create PR
-        uses: bigbinary/bump-product-version@v1.1.2
+        uses: bigbinary/bump-product-version@v1.1.3
+        continue-on-error: true
         with:
           labels: ${{ join(github.event.pull_request.labels.*.name, ',') }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump_label: patch
