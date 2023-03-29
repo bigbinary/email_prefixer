@@ -18,3 +18,4 @@ jobs:
             cypress-run
             cypress-triggered
             cypress-happy-path-triggered
+            pause-auto-update
