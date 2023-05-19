@@ -3,10 +3,12 @@ name: neetoCi
 global_job_config:
   setup:
     - checkout
-    - sem-version ruby 3.0.4
+    - neetoci-version ruby 3.0.4
     - bundle config path 'vendor/bundle'
     - bundle config set --local without 'development'
+    - cache restore
     - bundle install
+    - cache store
   jobs:
     - name: CiChecks
       commands:
