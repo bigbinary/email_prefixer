@@ -13,7 +13,7 @@ module NeetoEmailPrefixer
     end
 
     def configuration
-      @configuration ||= NeetoEmailPrefixer::Configuration.new
+      @_configuration ||= NeetoEmailPrefixer::Configuration.new
     end
   end
 end
