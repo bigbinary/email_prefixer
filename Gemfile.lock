@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://O6Ts9-SVDaUZpHMRs2CpJp22RwbETDE@gems.neeto.com/
   specs:
-    neeto-commons-backend (1.0.107)
+    neeto-commons-backend (1.0.111)
       actionview
       bullet
       database_cleaner
@@ -27,7 +27,7 @@ GEM
       sidekiq-cron
       sidekiq-failures
       webmock
-    neeto-compliance (1.0.62)
+    neeto-compliance (1.0.65)
       colorize
       deep_merge
       hashdiff
@@ -192,6 +192,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
+      racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -350,6 +352,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.3-x86_64-darwin)
+    sqlite3 (1.6.3-x86_64-linux)
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)
@@ -377,6 +380,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bundler
