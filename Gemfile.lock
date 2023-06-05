@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://O6Ts9-SVDaUZpHMRs2CpJp22RwbETDE@gems.neeto.com/
   specs:
-    neeto-commons-backend (1.0.111)
+    neeto-commons-backend (1.0.112)
       actionview
       bullet
       database_cleaner
@@ -27,7 +27,7 @@ GEM
       sidekiq-cron
       sidekiq-failures
       webmock
-    neeto-compliance (1.0.65)
+    neeto-compliance (1.0.69)
       colorize
       deep_merge
       hashdiff
@@ -151,7 +151,7 @@ GEM
     hashie (5.0.0)
     honeybadger (5.2.1)
     htmlentities (4.3.4)
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
     jwt (2.7.0)
