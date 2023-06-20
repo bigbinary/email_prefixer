@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://O6Ts9-SVDaUZpHMRs2CpJp22RwbETDE@gems.neeto.com/
   specs:
-    neeto-commons-backend (1.0.140)
+    neeto-commons-backend (1.0.142)
       actionview
       bullet
       database_cleaner
@@ -27,7 +27,7 @@ GEM
       sidekiq-cron
       sidekiq-failures
       webmock
-    neeto-compliance (1.0.81)
+    neeto-compliance (1.0.82)
       colorize
       deep_merge
       hashdiff
@@ -110,7 +110,7 @@ GEM
       uniform_notifier (~> 1.11)
     byebug (11.1.3)
     coderay (1.1.3)
-    colorize (0.8.1)
+    colorize (1.0.1)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     coveralls (0.8.23)
@@ -178,7 +178,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.18.0)
+    minitest (5.18.1)
     multi_xml (0.6.0)
     net-imap (0.3.6)
       date
