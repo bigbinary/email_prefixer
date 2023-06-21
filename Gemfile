@@ -19,3 +19,6 @@ group :development, :test do
     gem "neeto-compliance"
   end
 end
+
+# adds unique constraints to sidekiq jobs
+gem "sidekiq-unique-jobs"
