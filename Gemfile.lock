@@ -27,7 +27,7 @@ GEM
       sidekiq-cron
       sidekiq-failures
       webmock
-    neeto-compliance (1.0.88)
+    neeto-compliance (1.0.89)
       colorize
       deep_merge
       hashdiff
