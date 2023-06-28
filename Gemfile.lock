@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    neeto-email-prefixer (1.0.30)
+    neeto-email-prefixer (1.0.31)
       rails (>= 4.0)
 
 GEM
