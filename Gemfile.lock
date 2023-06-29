@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://O6Ts9-SVDaUZpHMRs2CpJp22RwbETDE@gems.neeto.com/
   specs:
-    neeto-commons-backend (1.0.155)
+    neeto-commons-backend (1.0.156)
       actionview
       bullet
       database_cleaner
@@ -27,7 +27,7 @@ GEM
       sidekiq-cron
       sidekiq-failures
       webmock
-    neeto-compliance (1.0.90)
+    neeto-compliance (1.0.91)
       colorize
       deep_merge
       hashdiff
@@ -140,7 +140,7 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
-    faraday (2.7.7)
+    faraday (2.7.8)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
